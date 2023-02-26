@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import { Button } from "react-bootstrap";
+import SendEmail from "./SendEmail";
 
 interface Message {
     name: string;
@@ -71,6 +72,7 @@ export default function Contact() {
                     Send
                 </Button>
             </Form>
+            <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>
         </div>
     );
 }
