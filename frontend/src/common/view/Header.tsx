@@ -9,7 +9,7 @@ function Header(): JSX.Element {
                 <Container>
                     <Nav className="me-auto collapse navbar-collapse d-flex justify-content-center">
                         <Nav.Link as={Link} to="/" aria-label="Home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="#features" aria-label="Features">Features</Nav.Link>
+                        <Nav.Link as={Link} to="/about" aria-label="Features">About me</Nav.Link>
                         <Nav.Link as={Link} to="/contact" aria-label="Contact">Contact</Nav.Link>
                     </Nav>
                 </Container>
