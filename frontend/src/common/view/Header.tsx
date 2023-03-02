@@ -5,7 +5,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 function Header(): JSX.Element {
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand="xl">
+            <Navbar bg="black" variant="dark" expand="xl">
                 <Container>
                     <Nav className="me-auto collapse navbar-collapse d-flex justify-content-center">
                         <Nav.Link as={Link} to="/" aria-label="Home">Home</Nav.Link>
