@@ -8,7 +8,13 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.static(path.resolve('../frontend/build')));
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
 app.use(cors({ credentials:true, origin:'*' }));
 app.use(express.json());
