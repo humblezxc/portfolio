@@ -24,8 +24,4 @@ app.get('*', (req, res) => {
 
 app.use(cors());
 app.use(bodyParser.json());
-
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
-});
 app.listen(()=> console.log(`Server running at port ${process.env.PORT}`));
