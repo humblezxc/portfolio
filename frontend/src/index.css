@@ -1,10 +1,8 @@
-div {
-  font-family: 'Poppins', sans-serif;
-  color: #e7d9ea;
-}
+
 .navbar {
   font-family: 'Poppins', sans-serif;
   background-color: black;
+  font-size: 15px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -14,4 +12,32 @@ div {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
   color: white;
+}
+/*.row, .col {*/
+/*  font-family: 'Poppins', sans-serif;*/
+/*  font-size: 25px;*/
+/*  color: #e7d9ea;*/
+/*  background-color: black;*/
+/*}*/
+.about {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  color: #e7d9ea;
+  padding: 5rem;
+  font-weight: 300;
+
+}
+.main-about{
+    background-color: black;
+}
+
+.contact {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  color: #e7d9ea;
+  /*margin: 0;*/
+  padding: 5rem;
+}
+.main-contact{
+  background-color: black;
 }
