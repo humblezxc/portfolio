@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
-import {Button, Col, Row} from "react-bootstrap";
+import {Button, Col, Row, Container, ButtonGroup} from "react-bootstrap";
 import SendEmail from "./SendEmail";
 
 interface Message {
@@ -35,49 +35,53 @@ export default function Contact() {
     };
 
     return (
-        <div className="mt-5">
-            <Row className="align-items-center">
-                <Col md={6} className="">Here will be animation</Col>
-                <Col md={6}>
-                    <Form className="w-50" onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            Name:
-                            <Form.Control
-                                type="string"
-                                placeholder="name"
-                                name="name"
-                                value={message.name}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                            Email:
-                            <Form.Control
-                                type="email"
-                                placeholder="email"
-                                name="email"
-                                value={message.email}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            Text:
-                            <Form.Control
-                                as="textarea"
-                                rows={3}
-                                placeholder="text"
-                                name="text"
-                                value={message.text}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Button className="btn-primary" type="submit">
-                            Send
-                        </Button>
-                    </Form>
-                    <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>
-                </Col>
-            </Row>
+        <div className="main-contact">
+            <Container className="contact">
+                <Row className="align-items-center">
+                    <Col md={6} className="">Here will be animation</Col>
+                    <Col md={6}>
+                        <Form className="w-50" onSubmit={handleSubmit}>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                Name:
+                                <Form.Control
+                                    type="string"
+                                    placeholder="name"
+                                    name="name"
+                                    value={message.name}
+                                    onChange={handleInputChange}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+                                Email:
+                                <Form.Control
+                                    type="email"
+                                    placeholder="email"
+                                    name="email"
+                                    value={message.email}
+                                    onChange={handleInputChange}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                Text:
+                                <Form.Control
+                                    as="textarea"
+                                    rows={3}
+                                    placeholder="text"
+                                    name="text"
+                                    value={message.text}
+                                    onChange={handleInputChange}
+                                />
+                            </Form.Group>
+                        </Form>
+                        <Col md={6}>
+                            <Button variant="outline-success" type="submit">
+                                Send
+                            </Button>
+                            <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>
+                        </Col>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
