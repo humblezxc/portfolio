@@ -3,6 +3,8 @@ import db from "../config/Database";
 
 interface MessageAttributes {
     id: number;
+    fullName: string;
+    email: string;
     content: string;
     createdAt: Date;
     updatedAt: Date;
@@ -15,6 +17,14 @@ const Message = db.define<Model<MessageAttributes, MessageCreationAttributes>>('
         type: DataTypes.INTEGER.UNSIGNED,
         autoIncrement: true,
         primaryKey: true,
+    },
+    fullName: {
+        type: DataTypes.STRING(1024),
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING(1024),
+        allowNull: false,
     },
     content: {
         type: DataTypes.STRING(1024),
