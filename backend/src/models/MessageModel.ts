@@ -12,7 +12,7 @@ interface MessageAttributes {
 
 type MessageCreationAttributes = Optional<MessageAttributes, 'id'>;
 
-const Message = db.define<Model<MessageAttributes, MessageCreationAttributes>>('Message', {
+const Message = db.define<Model<MessageAttributes, MessageCreationAttributes>>('messages', {
     id: {
         type: DataTypes.INTEGER.UNSIGNED,
         autoIncrement: true,
@@ -40,8 +40,8 @@ const Message = db.define<Model<MessageAttributes, MessageCreationAttributes>>('
         allowNull: false,
         defaultValue: DataTypes.NOW,
     },
-}, {
-    tableName: 'messages',
+},{
+    freezeTableName:true
 });
 
 export default Message;
