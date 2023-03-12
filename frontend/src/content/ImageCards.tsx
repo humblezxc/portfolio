@@ -58,7 +58,7 @@ const ImageCards: React.FC = () => {
     return (
         <div className="d-flex flex-wrap justify-content-center">
             {data.map((item, index) => (
-                <div className=" m-3" key={index} style={{ width: "400px", height: "230px" }}>
+                <div className="m-3" key={index} style={{ width: "400px", height: "230px" }}>
                     <ImageCard
                         imageSource={image}
                     />

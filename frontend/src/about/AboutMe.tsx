@@ -4,7 +4,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 export default function AboutMe () {
 
     return(
-        <div className="main-about">
+        <main className="main-about">
             <Container className="about">
                 <Row className="align-items-center">
                     <Col md={6}>
@@ -27,6 +27,6 @@ export default function AboutMe () {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </main>
     );
 }

@@ -35,12 +35,12 @@ export default function Contact() {
     };
 
     return (
-        <div className="main-contact">
+        <main className="main-contact">
             <Container className="contact">
                 <Row className="align-items-center">
-                    <Col md={6} className="">Here will be animation</Col>
+                    <Col md={6} className="d-grid justify-content-center">Here will be animation</Col>
                     <Col md={6}>
-                        <Form className="w-50" onSubmit={handleSubmit}>
+                        <Form className="d-grid justify-content-center" onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 Name:
                                 <Form.Control
@@ -82,6 +82,6 @@ export default function Contact() {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </main>
     );
 }
