@@ -4,8 +4,8 @@ import ImageCards from "../content/ImageCards";
 
 export default function Home () {
     return(
-        <div className="bg-black py-3">
+        <main>
             <ImageCards />
-        </div>
+        </main>
     );
 }
