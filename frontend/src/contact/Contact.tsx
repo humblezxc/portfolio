@@ -36,7 +36,7 @@ export default function Contact() {
     };
 
     return (
-        <main className="main-contact">
+        <main>
             <Container className="contact">
                 <Row className="align-items-center">
                     <Col md={6} className="d-grid justify-content-center">
