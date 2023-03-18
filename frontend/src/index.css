@@ -1,22 +1,25 @@
 
-*{
-  font-family: 'Poppins', sans-serif;
-  background-color: black;
-  box-sizing: border-box;
+* {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    box-sizing: border-box;
 }
-body{
-  margin: 0;
-  padding: 0;
-  justify-content: space-between;
+
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
 }
+
 .navbar-dark .navbar-nav .nav-link {
-  color: #e7d9ea;
+    color: #e7d9ea;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: white;
+    color: white;
 }
+
 /*.row, .col {*/
 /*  font-family: 'Poppins', sans-serif;*/
 /*  font-size: 25px;*/
@@ -24,41 +27,68 @@ body{
 /*  background-color: black;*/
 /*}*/
 .about {
-  font-family: 'Poppins', sans-serif;
-  font-size: 25px;
-  color: #e7d9ea;
-  padding: 5rem;
-  font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #e7d9ea;
+    padding: 5rem;
+    font-weight: 300;
 }
-.main-about{
+
+.main-about {
     background-color: black;
 }
 
 .contact {
-  font-family: 'Poppins', sans-serif;
-  font-size: 25px;
-  color: #e7d9ea;
-  font-weight: 300;
-  padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #e7d9ea;
+    font-weight: 300;
+    padding: 0;
 
 }
-.main-contact{
-  background-color: black;
+
+.main-contact {
+    background-color: black;
 }
+
 footer {
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
 p {
-  color: #e7d9ea;
+    color: #e7d9ea;
 }
 
 main {
-  margin: auto;
-  flex: 1;
-  display: flex;
-  justify-content: center; /* center main.contact horizontally */
-  align-items: center; /* center main.contact vertically */
-  flex-direction: column;}
+    margin: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center; /* center main.contact horizontally */
+    align-items: center; /* center main.contact vertically */
+    flex-direction: column;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid #198754;
+    outline: none;
+    box-shadow: none;
+    background-color: black;
+
+}
+
+.input::placeholder {
+    color: #198754;
+}
+
+.input:focus {
+    background-color: black;
+}
+
+.input:not(:placeholder-shown) {
+    color: grey;
+    background-color: black;
+}
