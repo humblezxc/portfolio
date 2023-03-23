@@ -30,9 +30,21 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
     color: #e7d9ea;
-    padding: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     font-weight: 300;
+    /*animation-name: slide-up;*/
+    /*animation-duration: 1s;*/
+    /*animation-delay: 0s;*/
+    /*animation-fill-mode: backwards;*/
 }
+
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
 
 .contact {
     font-family: 'Poppins', sans-serif;
@@ -52,6 +64,8 @@ footer {
 
 p {
     color: #e7d9ea;
+    margin-bottom: 1rem; /* add some spacing between paragraphs */
+    text-align: justify; /* justify the text to make it easier to read */
 }
 
 main {
@@ -61,6 +75,11 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+
 }
 
 .input {
@@ -83,4 +102,13 @@ main {
 .input:not(:placeholder-shown) {
     color: grey;
     background-color: black;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
