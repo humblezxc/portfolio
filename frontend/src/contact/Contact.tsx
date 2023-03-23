@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import {Button, Col, Row, Container, ButtonGroup} from "react-bootstrap";
 import SendEmail from "./SendEmail";
+import GlitchText from "../common/view/GlitchText";
 
 interface Message {
     name: string;
@@ -27,7 +28,7 @@ export default function Contact() {
     };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setMessage((prevMessage) => ({
             ...prevMessage,
             [name]: value,
@@ -35,15 +36,17 @@ export default function Contact() {
     };
 
     return (
-        <main className="main-contact">
+        <main>
             <Container className="contact">
                 <Row className="align-items-center">
-                    <Col md={6} className="d-grid justify-content-center">Here will be animation</Col>
+                    <Col md={6} className="d-grid justify-content-center">
+                        <GlitchText text="Here will be animation"/>
+                    </Col>
                     <Col md={6}>
                         <Form className="d-grid justify-content-center" onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                Name:
                                 <Form.Control
+                                    className="input"
                                     type="string"
                                     placeholder="name"
                                     name="name"
@@ -52,8 +55,8 @@ export default function Contact() {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                                Email:
                                 <Form.Control
+                                    className="input"
                                     type="email"
                                     placeholder="email"
                                     name="email"
@@ -62,9 +65,9 @@ export default function Contact() {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                Text:
                                 <Form.Control
                                     as="textarea"
+                                    className="input"
                                     rows={3}
                                     placeholder="text"
                                     name="text"
@@ -72,13 +75,20 @@ export default function Contact() {
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
+                            <Form.Group>
+                                <Button variant="outline-success" type="submit">
+                                    Send
+                                </Button>
+                                <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>
+
+                            </Form.Group>
                         </Form>
-                        <Col md={6}>
-                            <Button variant="outline-success" type="submit">
-                                Send
-                            </Button>
-                            <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>
-                        </Col>
+                        {/*<Col md={6}>*/}
+                        {/*    <Button variant="outline-success" type="submit">*/}
+                        {/*        Send*/}
+                        {/*    </Button>*/}
+                        {/*    <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>*/}
+                        {/*</Col>*/}
                     </Col>
                 </Row>
             </Container>
