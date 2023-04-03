@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import {Request, Response} from 'express';
 import Message from '../models/MessageModel';
 
 export const getMessages = async (req: Request, res: Response): Promise<void> => {
@@ -11,9 +11,9 @@ export const getMessages = async (req: Request, res: Response): Promise<void> =>
 };
 
 export const newMessage = async (req: Request, res: Response): Promise<void> => {
-    const { fullName, email, content } = req.body;
+    const {fullName, email, content} = req.body;
     try {
-        const newMessage = await Message.create({ fullName, email, content });
+        const newMessage = await Message.create({fullName, email, content});
         if (newMessage) {
             res.json({
                 message: 'Message sent successfully',
