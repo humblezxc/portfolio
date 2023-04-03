@@ -11,6 +11,7 @@ export const getMessages = async (req: Request, res: Response): Promise<void> =>
 };
 
 export const newMessage = async (req: Request, res: Response): Promise<void> => {
+    console.log("TEST fix backend")
     const {fullName, email, content} = req.body;
     try {
         const newMessage = await Message.create({fullName, email, content});

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
-import {Button, Col, Row, Container, ButtonGroup} from "react-bootstrap";
+import {Button, Col, Row, Container} from "react-bootstrap";
 import SendEmail from "./SendEmail";
 import GlitchText from "../common/view/GlitchText";
 
@@ -23,6 +23,7 @@ export default function Contact() {
         try {
             await axios.post<Message>("http://localhost:5000/api/messages", message);
         } catch (err) {
+            console.log(err);
             console.log((err as { response: { data: { msg: string } } }).response.data.msg);
         }
     };
