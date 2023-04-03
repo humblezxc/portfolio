@@ -1,4 +1,4 @@
-import { DataTypes, Model, Optional } from 'sequelize';
+import {DataTypes, Model, Optional} from 'sequelize';
 import db from "../config/Database";
 
 interface MessageAttributes {
@@ -40,8 +40,12 @@ const Message = db.define<Model<MessageAttributes, MessageCreationAttributes>>('
         allowNull: false,
         defaultValue: DataTypes.NOW,
     },
-},{
-    freezeTableName:true
+}, {
+    freezeTableName: true
 });
 
+(async () => {
+    await db.sync();
+})();
 export default Message;
+

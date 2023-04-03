@@ -1,6 +1,6 @@
 import React from "react";
-import {Container, Row, Col, Image} from 'react-bootstrap';
-import MyImage from "../MyImage.jpg"
+import {Container, Image} from 'react-bootstrap';
+import MyImage from "../portfolioPhoto.jpg"
 
 export default function AboutMe() {
 
@@ -24,7 +24,7 @@ export default function AboutMe() {
                     languages
                 </p>
             </Container>
-            <Image className="h" src={MyImage} alt="Its me" style={{maxHeight: 500, maxWidth: 600}} fluid/>
+            <Image className="h" src={MyImage} alt="Its me" style={{maxHeight: 800, maxWidth: 700}} fluid/>
         </main>
     );
 }

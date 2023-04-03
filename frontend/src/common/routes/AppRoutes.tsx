@@ -4,12 +4,15 @@ import routes from "./Routes";
 import Home from "../../home/Home";
 import Contact from "../../contact/Contact";
 import AboutMe from "../../about/AboutMe";
+import ProjectPage from "../../content/ProjectPage";
+
 export default function AppRoutes() {
-    return(
+    return (
         <Routes>
             <Route path={routes.HOME} element={<Home/>}/>
             <Route path={routes.CONTACT} element={<Contact/>}/>
             <Route path={routes.ABOUT} element={<AboutMe/>}/>
+            <Route path={`${routes.PROJECT}/:id`} element={<ProjectPage/>}/>
         </Routes>
     );
 }
