@@ -11,11 +11,11 @@ const app = express();
 
 app.use(cors({credentials: true, origin: '*'}));
 
-app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+app.use(express.static(path.resolve(__dirname, "../../frontend/build")));
 
 app.use(express.json());
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../../frontend/build', 'index.html'));
 });
 
 app.use(bodyParser.json());
