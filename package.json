@@ -11,7 +11,8 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
   },
   "license": "ISC",
   "devDependencies": {
