@@ -21,7 +21,7 @@ export default function Contact() {
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            await axios.post<Message>("/api/messages", message);
+            await axios.post<Message>("api/messages", message);
         } catch (err) {
             console.log(err);
             console.log((err as { response: { data: { msg: string } } }).response.data.msg);
