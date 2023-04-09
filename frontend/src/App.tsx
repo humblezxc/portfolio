@@ -7,11 +7,9 @@ import Footer from "./common/view/Footer";
 export default function App() {
     return (
         <BrowserRouter>
-            <div className="d-flex flex-column" style={{minHeight: "100vh"}}>
+            <div className="App">
                 <Header/>
-                <div className="flex-grow-1 d-flex justify-content-center">
-                    <AppRoutes/>
-                </div>
+                <AppRoutes/>
                 <Footer/>
             </div>
         </BrowserRouter>
