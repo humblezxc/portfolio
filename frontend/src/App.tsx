@@ -11,8 +11,8 @@ export default function App() {
                 <Header/>
                 <div className="flex-grow-1 d-flex justify-content-center">
                     <AppRoutes/>
-                    <Footer/>
                 </div>
+                <Footer/>
             </div>
         </BrowserRouter>
     );
