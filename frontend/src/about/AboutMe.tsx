@@ -7,21 +7,22 @@ export default function AboutMe() {
         <main className="about">
             <div className="description">
                 <h1>About Me</h1>
-                <p>
-                    Hi! My name is <strong>Yaroslav Stopenchuk</strong> i am frontend developer.
-                </p>
-                <p>
-                    “Reality is created by the mind” and i love to create it with computer and keyboard. I want
-                    to create most user friendly websites which bring value and purpose.
-                </p>
-                <p>
-                    My toolset contain HTML, CSS, JavaScript, React, Redux, React Router, Node.js, REST API, GIT
-                    & MySQL.
-                </p>
-                <p>
-                    Besides that i love to meet new people, read books, hitchhiking and learning new foreign
-                    languages
-                </p>
+                <div className="text-description">
+                    <p>
+                        Hi! My name is <strong>Yaroslav Stopenchuk</strong>. I am a frontend developer.
+                    </p>
+                    <p>
+                        “Reality is created by the mind” and I love to create it with a computer and keyboard. I want to
+                        create the most user-friendly websites which bring value and purpose.
+                    </p>
+                    <p>
+                        My toolset contains HTML, CSS, JavaScript, TypeScript, React, React Router, Node.js, REST API,
+                        GIT & MySQL.
+                    </p>
+                    <p>
+                        Besides that, I love to meet new people, read books, hike, and learn new foreign languages.
+                    </p>
+                </div>
             </div>
             <div className="photo">
                 <img src={MyImage} alt="Its me"/>
