@@ -39,9 +39,10 @@ export default function Contact() {
     return (
         <main>
             <Container className="contact">
-                <Row className="align-items-center">
+                <Row className="">
                     <Col md={6} className="d-grid justify-content-center">
-                        <GlitchText text="Here will be animation"/>
+                        <GlitchText text="Hire me up"/>
+                        <GlitchText text="Don't be shy!"/>
                     </Col>
                     <Col md={6}>
                         <Form className="d-grid justify-content-center" onSubmit={handleSubmit}>
