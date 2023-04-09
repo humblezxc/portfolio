@@ -1,12 +1,11 @@
 import React from "react";
-import {Container, Image} from 'react-bootstrap';
 import MyImage from "../portfolioPhoto.jpg"
 
 export default function AboutMe() {
 
     return (
-        <main style={{marginTop: 0}}>
-            <Container className="about">
+        <main className="about">
+            <div className="description">
                 <h1>About Me</h1>
                 <p>
                     Hi! My name is <strong>Yaroslav Stopenchuk</strong> i am frontend developer.
@@ -23,8 +22,10 @@ export default function AboutMe() {
                     Besides that i love to meet new people, read books, hitchhiking and learning new foreign
                     languages
                 </p>
-            </Container>
-            <Image className="h" src={MyImage} alt="Its me" style={{maxHeight: 800, maxWidth: 700}} fluid/>
+            </div>
+            <div className="photo">
+                <img src={MyImage} alt="Its me"/>
+            </div>
         </main>
     );
 }
