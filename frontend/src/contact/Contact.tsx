@@ -85,12 +85,6 @@ export default function Contact() {
 
                             </Form.Group>
                         </Form>
-                        {/*<Col md={6}>*/}
-                        {/*    <Button variant="outline-success" type="submit">*/}
-                        {/*        Send*/}
-                        {/*    </Button>*/}
-                        {/*    <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>*/}
-                        {/*</Col>*/}
                     </Col>
                 </Row>
             </Container>
