@@ -1,22 +1,9 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    background-color: black;
-    box-sizing: border-box;
-}
-
 .project-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 800px;
-    height: 800px;
-    margin: auto 0 auto; /* add margin-top */
-
-    /*height: 100vh;*/
-    background-color: black;
-    color: #e7d9ea;
+    margin: auto 0 auto;
     animation-name: slide-up;
     animation-duration: 1s;
     animation-delay: 0s;
@@ -24,14 +11,17 @@
 }
 
 .project-name {
-    font-weight: 500;
-    font-size: 50px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #e7d9ea;
+    font-size: 36px;
+    text-align: center;
 }
 
 .carousel-container {
+    display: flex;
+    justify-content: center;
     position: relative;
-    /*margin-top: -100px;*/
     width: 100%;
     height: 100%;
     margin-bottom: 50px;
@@ -40,25 +30,26 @@
 .carousel-item {
     height: 100%;
     width: 100%;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-
 }
 
 .carousel-item img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /*object-fit: contain;*/
-
 
 }
 
 .carousel {
     position: static;
+}
+
+.carousel-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+
 }
 
 .carousel-item-content {
@@ -70,84 +61,23 @@
     width: 100%;
     padding: 50px;
     text-align: center;
-    color: #e7d9ea;
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    justify-content: center;*/
-    /*    align-items: center;*/
-    /*    text-align: center;*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
 }
 
-.carousel-item-content h3 {
+.carousel-item-content p {
     /*margin-bottom: 20px;*/
     margin: 0;
-    color: #e7d9ea;
-
 }
 
 .carousel-item-content a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
 }
 
-.carousel-item-content a img {
-    height: 50px;
-    width: 50px;
+.carousel-item-content a Img {
+    height: 100px;
+    width: 100px;
     margin-left: 10px;
 }
 
 .slide-up {
     transform: translateY(30px);
 }
-
-/*.project-page {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    width: 700px;*/
-/*    height: 400px;*/
-/*    margin: 100px auto 0 auto; !* add margin-top *!*/
-/*}*/
-
-/*.carousel-container {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
-/*.carousel-item {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
-/*.carousel-item img {*/
-/*    max-width: 100%;*/
-/*    max-height: 100%;*/
-/*    object-fit: contain;*/
-/*}*/
-
-/*.carousel-item-content {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
-/*.carousel-item-content h3 {*/
-/*    margin: 0;*/
-/*}*/
-
-/*.carousel-item-content img {*/
-/*    max-width: 100%;*/
-/*    max-height: 100%;*/
-/*}*/

@@ -67,21 +67,21 @@ export default function ProjectPage() {
     const project = projectData.find((p) => p.id === id);
 
     if (!project) {
-        return <div>Project not found</div>;
+        return <main>Project not found</main>;
     }
 
     return (
-        <div className="project-page">
+        <main className="project-page">
             <h1 className="project-name">{project.name}</h1>
             <div className="carousel-container">
-                <Carousel>
+                <Carousel className="carousel-size">
                     {project.slides.map((slide: SlideData, index: number) => (
                         <Carousel.Item key={index} className="carousel-item">
                             {slide.imageSrc ? (
                                 <img src={slide.imageSrc} alt={slide.text}/>
                             ) : (
                                 <div className="carousel-item-content">
-                                    <h3>{slide.text}</h3>
+                                    <p>{slide.text}</p>
                                     {slide.iconSrc && (
                                         <a href={slide.link}>
                                             <img src={slide.iconSrc} alt="Link"/>
@@ -93,6 +93,6 @@ export default function ProjectPage() {
                     ))}
                 </Carousel>
             </div>
-        </div>
+        </main>
     );
 }

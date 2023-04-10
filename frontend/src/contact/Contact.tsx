@@ -39,9 +39,10 @@ export default function Contact() {
     return (
         <main>
             <Container className="contact">
-                <Row className="align-items-center">
+                <Row className="m-2 mb-4">
                     <Col md={6} className="d-grid justify-content-center">
-                        <GlitchText text="Here will be animation"/>
+                        <GlitchText text="Hire me up"/>
+                        <GlitchText text="Don't be shy!"/>
                     </Col>
                     <Col md={6}>
                         <Form className="d-grid justify-content-center" onSubmit={handleSubmit}>
@@ -84,12 +85,6 @@ export default function Contact() {
 
                             </Form.Group>
                         </Form>
-                        {/*<Col md={6}>*/}
-                        {/*    <Button variant="outline-success" type="submit">*/}
-                        {/*        Send*/}
-                        {/*    </Button>*/}
-                        {/*    <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>*/}
-                        {/*</Col>*/}
                     </Col>
                 </Row>
             </Container>
