@@ -1,19 +1,9 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    background-color: black;
-    color: #e7d9ea;
-}
-
 .project-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 700px;
-    height: 700px;
     margin: auto 0 auto;
-
     animation-name: slide-up;
     animation-duration: 1s;
     animation-delay: 0s;
@@ -57,8 +47,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
+
 
 }
 
@@ -66,31 +56,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: center;*/
+    align-items: center;
     height: 100%;
     width: 100%;
     padding: 50px;
     text-align: center;
-    color: #e7d9ea;
 }
 
-.carousel-item-content h3 {
+.carousel-item-content p {
     /*margin-bottom: 20px;*/
     margin: 0;
-    color: #e7d9ea;
-
 }
 
 .carousel-item-content a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
 }
 
 .carousel-item-content a Img {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     margin-left: 10px;
 }
 

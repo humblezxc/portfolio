@@ -39,7 +39,7 @@ export default function Contact() {
     return (
         <main>
             <Container className="contact">
-                <Row className="">
+                <Row className="m-2 mb-4">
                     <Col md={6} className="d-grid justify-content-center">
                         <GlitchText text="Hire me up"/>
                         <GlitchText text="Don't be shy!"/>
