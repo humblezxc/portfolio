@@ -2,6 +2,8 @@ import React from "react";
 import {useParams} from "react-router-dom";
 import {Carousel} from "react-bootstrap";
 import "./ProjectPage.css";
+import icon from "./planet-icon.jpg"
+import aimGameImage from './aim-game.jpg';
 
 interface Params {
     [key: string]: string;
@@ -25,6 +27,25 @@ interface ProjectData {
 const projectData: ProjectData[] = [
     {
         id: "1",
+        name: "AIM GAME",
+        slides: [
+            {
+                text: "In a menu, you have a button called 'start,' and when you click on it, you need to select\n" +
+                    "a game time. And then, on the desk will be randomly created canvases of different\n" +
+                    "sizes. So, all you need to do is click on canvas as fast as possible.",
+            },
+            {
+                imageSrc: aimGameImage,
+                text: "Aim game screenshot",
+            },
+            {
+                text: "Try it yourself!",
+                link: "https://humblezxc.github.io/aim-game/",
+            },
+        ],
+    },
+    {
+        id: "2",
         name: "COLLECTIONS WEBSITE",
         slides: [
             {
@@ -38,29 +59,8 @@ const projectData: ProjectData[] = [
                 text: "Image of Project 1",
             },
             {
-                text: "Some other text", // add a text property
-                iconSrc: "https://picsum.photos/600/600",
+                text: "Try it yourself!",
                 link: "https://github.com/humblezxc/course-project",
-            },
-        ],
-    },
-    {
-        id: "2",
-        name: "AIM GAME",
-        slides: [
-            {
-                text: "In a menu, you have a button called 'start,' and when you click on it, you need to select\n" +
-                    "a game time. And then, on the desk will be randomly created canvases of different\n" +
-                    "sizes. So, all you need to do is click on canvas as fast as possible.",
-            },
-            {
-                imageSrc: "https://picsum.photos/800/600",
-                text: "Image of Project 2",
-            },
-            {
-                text: "Some other text", // add a text property
-                iconSrc: "https://picsum.photos/600/600",
-                link: "https://github.com/humblezxc/aim-game",
             },
         ],
     },
@@ -74,12 +74,12 @@ const projectData: ProjectData[] = [
                     "infinity scroll and seed chosen option.",
             },
             {
-                imageSrc: "https://picsum.photos/800/600",
+                imageSrc: "./planet-icon.jpg",
                 text: "Image of Project 3",
             },
             {
-                text: "Some other text", // add a text property
-                iconSrc: "https://picsum.photos/600/600",
+                text: "Try it yourself!",
+                iconSrc: "./planet-icon.jpg",
                 link: "https://github.com/humblezxc/data-generation",
             },
         ],
@@ -98,9 +98,9 @@ const projectData: ProjectData[] = [
                 text: "Image of Project 3",
             },
             {
-                text: "Some other text", // add a text property
-                iconSrc: "https://picsum.photos/600/600",
-                link: "https://github.com/humblezxc/howerd-desk",
+                text: "Try it yourself!",
+                iconSrc: "./planet-icon.jpg",
+                link: "https://humblezxc.github.io/howerd-desk/",
             },
         ],
     },
@@ -128,7 +128,7 @@ export default function ProjectPage() {
                                     <h3>{slide.text}</h3>
                                     {slide.iconSrc && (
                                         <a href={slide.link}>
-                                            <img src={slide.iconSrc} alt="Link"/>
+                                            <img src={icon} alt="Link"/>
                                         </a>
                                     )}
                                 </div>
