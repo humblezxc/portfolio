@@ -56,7 +56,7 @@ const projectData: ProjectData[] = [
                     "items will be on the home page.",
             },
             {
-                imageSrc: "https://picsum.photos/800/600",
+                imageSrc: "",
                 text: "Image of Project 1",
             },
             {
@@ -76,7 +76,7 @@ const projectData: ProjectData[] = [
                     "infinity scroll and seed chosen option.",
             },
             {
-                imageSrc: "./planet-icon.jpg",
+                imageSrc: "",
                 text: "Image of Project 3",
             },
             {
@@ -96,7 +96,7 @@ const projectData: ProjectData[] = [
                     "its original form.",
             },
             {
-                imageSrc: "https://picsum.photos/800/600",
+                imageSrc: "",
                 text: "Image of Project 3",
             },
             {
