@@ -8,6 +8,8 @@
     animation-duration: 1s;
     animation-delay: 0s;
     animation-fill-mode: backwards;
+    max-width: 650px;
+    max-height: 700px;
 }
 
 .project-name {
@@ -21,7 +23,6 @@
 .carousel-container {
     display: flex;
     justify-content: center;
-    position: relative;
     width: 100%;
     height: 100%;
     margin-bottom: 50px;
@@ -39,15 +40,12 @@
 
 }
 
-.carousel {
-    position: static;
-}
-
 .carousel-size {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    position: static;
 
 
 }

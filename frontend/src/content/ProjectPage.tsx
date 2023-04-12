@@ -40,6 +40,7 @@ const projectData: ProjectData[] = [
             },
             {
                 text: "Try it yourself!",
+                iconSrc: "./planet-icon.jpg",
                 link: "https://humblezxc.github.io/aim-game/",
             },
         ],
@@ -60,6 +61,7 @@ const projectData: ProjectData[] = [
             },
             {
                 text: "Try it yourself!",
+                iconSrc: "./planet-icon.jpg",
                 link: "https://github.com/humblezxc/course-project",
             },
         ],
