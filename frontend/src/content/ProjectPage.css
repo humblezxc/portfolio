@@ -9,7 +9,8 @@
     animation-delay: 0s;
     animation-fill-mode: backwards;
     max-width: 650px;
-    max-height: 700px;
+    position: static;
+
 }
 
 .project-name {
@@ -45,7 +46,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    position: static;
 
 
 }
@@ -71,9 +71,8 @@
 }
 
 .carousel-item-content a Img {
-    height: 100px;
-    width: 100px;
-    margin-left: 10px;
+    height: 150px;
+    width: 150px;
 }
 
 .slide-up {
