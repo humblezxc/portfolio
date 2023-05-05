@@ -6,28 +6,27 @@ import SendEmail from "./SendEmail";
 import GlitchText from "../common/view/GlitchText";
 
 interface Message {
-    name: string;
+    fullName: string;
     email: string;
-    text: string;
+    content: string;
 }
 
 export default function Contact() {
     const [message, setMessage] = useState<Message>({
-        name: "",
+        fullName: "",
         email: "",
-        text: "",
+        content: "",
     });
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            await axios.post<Message>("api/messages", message);
+            await axios.post<Message>("/api/messages", message);
         } catch (err) {
             console.log(err);
             console.log((err as { response: { data: { msg: string } } }).response.data.msg);
         }
     };
-
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value} = event.target;
         setMessage((prevMessage) => ({
@@ -51,8 +50,8 @@ export default function Contact() {
                                     className="input"
                                     type="string"
                                     placeholder="name"
-                                    name="name"
-                                    value={message.name}
+                                    name="fullName"
+                                    value={message.fullName}
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
@@ -72,8 +71,8 @@ export default function Contact() {
                                     className="input"
                                     rows={3}
                                     placeholder="text"
-                                    name="text"
-                                    value={message.text}
+                                    name="content"
+                                    value={message.content}
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
@@ -82,7 +81,6 @@ export default function Contact() {
                                     Send
                                 </Button>
                                 <SendEmail buttonText=" Send Email" email="stopenchuk.yaroslav@gmail.com"/>
-
                             </Form.Group>
                         </Form>
                     </Col>
