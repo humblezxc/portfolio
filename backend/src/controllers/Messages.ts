@@ -1,30 +1,29 @@
 import {Request, Response} from 'express';
 import Message from '../models/MessageModel';
 
-export const getMessages = async (req: Request, res: Response): Promise<void> => {
-    try {
-        const messages = await Message.findAll();
-        res.json(messages);
-    } catch (err) {
-        console.log(err);
-    }
-};
-
 export const newMessage = async (req: Request, res: Response): Promise<void> => {
-    console.log("TEST fix backend")
     const {fullName, email, content} = req.body;
     try {
         const newMessage = await Message.create({fullName, email, content});
         if (newMessage) {
+            console.log(newMessage)
             res.json({
                 message: 'Message sent successfully',
                 data: newMessage,
             });
         }
     } catch (error) {
-        res.status(500).json({
-            message: 'Something went wrong',
-            data: {},
-        });
+        if (error.name === 'SequelizeValidationError') {
+            const errorMessages = error.errors.map((err: any) => err.message);
+            res.status(400).json({
+                message: 'Validation error',
+                errors: errorMessages,
+            });
+        } else {
+            res.status(500).json({
+                message: 'Server error',
+            });
+            console.log(error)
+        }
     }
 };
