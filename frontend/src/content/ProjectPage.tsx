@@ -1,7 +1,7 @@
 import React from "react";
 import {useParams} from "react-router-dom";
-import {Carousel} from "react-bootstrap";
-import "./ProjectPage.css";
+import {Carousel, Container} from "react-bootstrap";
+import "../styles/projectPage/ProjectPage.scss";
 import icon from "./planet-icon.jpg"
 import aimGameImage from './aim-game.jpg';
 
@@ -117,28 +117,30 @@ export default function ProjectPage() {
     }
 
     return (
-        <main className="project-page">
-            <h1 className="project-name">{project.name}</h1>
-            <div className="carousel-container">
-                <Carousel className="carousel-size">
-                    {project.slides.map((slide: SlideData, index: number) => (
-                        <Carousel.Item key={index} className="carousel-item">
-                            {slide.imageSrc ? (
-                                <img src={slide.imageSrc} alt={slide.text}/>
-                            ) : (
-                                <div className="carousel-item-content">
-                                    <p>{slide.text}</p>
-                                    {slide.iconSrc && (
-                                        <a href={slide.link}>
-                                            <img src={icon} alt="Link"/>
-                                        </a>
-                                    )}
-                                </div>
-                            )}
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
-            </div>
+        <main>
+            <Container className="project-page">
+                <h1 className="project-name">{project.name}</h1>
+                <div className="carousel-container">
+                    <Carousel className="carousel-size">
+                        {project.slides.map((slide: SlideData, index: number) => (
+                            <Carousel.Item key={index} className="carousel-item">
+                                {slide.imageSrc ? (
+                                    <img src={slide.imageSrc} alt={slide.text}/>
+                                ) : (
+                                    <div className="carousel-item-content">
+                                        <p>{slide.text}</p>
+                                        {slide.iconSrc && (
+                                            <a href={slide.link}>
+                                                <img src={icon} alt="Link"/>
+                                            </a>
+                                        )}
+                                    </div>
+                                )}
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </div>
+            </Container>
         </main>
     );
 }

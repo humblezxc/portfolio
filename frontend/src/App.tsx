@@ -1,4 +1,5 @@
 import React from "react";
+import './App.scss'
 import {BrowserRouter} from 'react-router-dom';
 import AppRoutes from "./common/routes/AppRoutes";
 import Header from "./common/view/Header";
