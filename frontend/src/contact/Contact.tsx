@@ -36,15 +36,15 @@ export default function Contact() {
     };
 
     return (
-        <main>
-            <Container className="contact">
+        <main className="contact">
+            <Container>
                 <Row className="m-2 mb-4">
                     <Col md={6} className="d-grid justify-content-center">
                         <GlitchText text="Hire me up"/>
                         <GlitchText text="Don't be shy!"/>
                     </Col>
-                    <Col md={6}>
-                        <Form className="d-grid justify-content-center" onSubmit={handleSubmit}>
+                    <Col className="d-grid justify-content-center align-items-center" md={6}>
+                        <Form className="d-grid justify-content-center align-items-center" onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Control
                                     className="input"
@@ -76,7 +76,7 @@ export default function Contact() {
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="d-flex justify-content-center">
                                 <Button variant="outline-success" type="submit">
                                     Send
                                 </Button>
