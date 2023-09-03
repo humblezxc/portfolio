@@ -1,10 +1,10 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 import routes from "./Routes";
-import Home from "../../home/Home";
-import Contact from "../../contact/Contact";
-import AboutMe from "../../about/AboutMe";
-import ProjectPage from "../../content/ProjectPage";
+import Home from "../../pages/home/Home";
+import Contact from "../../pages/contact/Contact";
+import AboutMe from "../../pages/about/AboutMe";
+import ProjectPage from "../../pages/content/ProjectPage";
 import Layout from "../../components/layout/Layout";
 
 export default function AppRoutes() {

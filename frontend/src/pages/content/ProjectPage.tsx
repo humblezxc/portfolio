@@ -1,7 +1,7 @@
 import React from "react";
 import {useParams} from "react-router-dom";
 import {Carousel, Container} from "react-bootstrap";
-import "../styles/projectPage/ProjectPage.scss";
+import "../../styles/projectPage/ProjectPage.scss";
 import icon from "./planet-icon.jpg"
 import aimGameImage from './aim-game.jpg';
 
