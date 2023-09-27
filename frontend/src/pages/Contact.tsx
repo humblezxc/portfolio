@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import {Button, Col, Row, Container} from "react-bootstrap";
-import SendEmail from "./SendEmail";
-import GlitchText from "../../common/view/GlitchText";
+import SendEmail from "../components/SendEmail";
+import GlitchText from "../components/GlitchText";
 
 interface Message {
     fullName: string;

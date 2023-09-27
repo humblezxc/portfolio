@@ -1,9 +1,9 @@
 import React from "react";
 import {useParams} from "react-router-dom";
 import {Carousel, Container} from "react-bootstrap";
-import "../../styles/projectPage/ProjectPage.scss";
-import icon from "./planet-icon.jpg"
-import aimGameImage from './aim-game.jpg';
+import "../styles/projectPage/ProjectPage.scss";
+import icon from "../assets/content/planet-icon.jpg"
+import aimGameImage from '../assets/content/aim-game.jpg';
 
 interface Params {
     [key: string]: string;
