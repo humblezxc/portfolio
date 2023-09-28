@@ -9,6 +9,7 @@ const ImageCard: React.FC<Props> = ({imageSource}) => {
     return (
         <Card>
             <Image src={imageSource} fluid/>
+            <div className="m-lg-2 font-monospace">Check the project</div>
         </Card>
     );
 }
