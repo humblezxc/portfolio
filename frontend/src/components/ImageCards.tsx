@@ -23,7 +23,9 @@ const ImageCards: React.FC = () => {
                 <div className="m-3" key={index}>
                     <Link key={item.id} to={`/project/${item.id}`}>
                         <ImageCard
-                            imageSource={item.image}
+                            imageSrc={item.projectImageSrc}
+                            imageAlt={item.projectImageAlt}
+                            title={item.title}
                         />
                     </Link>
                 </div>

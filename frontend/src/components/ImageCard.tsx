@@ -1,15 +1,17 @@
 import React from "react";
 import {Card, Image} from "react-bootstrap";
 
-interface Props {
-    imageSource: string;
+interface ImageCardProps {
+    imageSrc: string;
+    imageAlt: string
+    title: string
 }
 
-const ImageCard: React.FC<Props> = ({imageSource}) => {
+const ImageCard = ({imageSrc, imageAlt, title}: ImageCardProps) => {
     return (
         <Card>
-            <Image src={imageSource} fluid/>
-            <div className="m-lg-2 font-monospace">Check the project</div>
+            <Image src={imageSrc} alt={imageAlt} fluid/>
+            <div className="m-lg-2 font-monospace text-black">{title}</div>
         </Card>
     );
 }
