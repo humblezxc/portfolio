@@ -3,18 +3,13 @@ export interface IProjects {
     title: string
     projectImageSrc: string
     projectImageAlt: string
-    slides: [
-        {
-            description: string
-        },
-        {
-            imageSrc: string
-            imageAlt: string
-        },
-        {
-            projectLink: string
-            iconSrc: string
-            projectSrc: string
-        }
-    ]
+    slides: Array<{
+        description?: string;
+        imageSrc?: string;
+        imageAlt?: string;
+        projectLink?: string;
+        iconSrc?: string;
+        iconALt?: string;
+        projectSrc?: string;
+    }>;
 }

@@ -1,5 +1,6 @@
 import {IProjects} from "../models/models";
 import aimGameImage from "../assets/content/aim-game.jpg";
+import icon from "../assets/content/planet-icon.jpg"
 
 export const projects: IProjects[] = [
     {
@@ -19,7 +20,8 @@ export const projects: IProjects[] = [
             },
             {
                 projectLink: "Try it yourself!",
-                iconSrc: "./planet-icon.jpg",
+                iconSrc: icon,
+                iconALt: 'Icon',
                 projectSrc: "https://humblezxc.github.io/aim-game/",
             },
         ],
@@ -42,7 +44,8 @@ export const projects: IProjects[] = [
             },
             {
                 projectLink: "Try it yourself!",
-                iconSrc: "./planet-icon.jpg",
+                iconSrc: icon,
+                iconALt: 'Icon',
                 projectSrc: "https://github.com/humblezxc/course-project",
             },
         ],
@@ -52,7 +55,6 @@ export const projects: IProjects[] = [
         title: 'Data generation',
         projectImageSrc: 'https://picsum.photos/id/486/400/230',
         projectImageAlt: 'Project cover',
-
         slides: [
             {
                 description: "In data generation, the program automatically generates fake English data. Also, you\n" +
@@ -65,7 +67,8 @@ export const projects: IProjects[] = [
             },
             {
                 projectLink: "Try it yourself!",
-                iconSrc: "./planet-icon.jpg",
+                iconSrc: icon,
+                iconALt: 'Icon',
                 projectSrc: "https://github.com/humblezxc/data-generation",
             },
         ],
@@ -75,7 +78,6 @@ export const projects: IProjects[] = [
         title: 'Hovered desk',
         projectImageSrc: 'https://picsum.photos/id/893/400/230',
         projectImageAlt: 'Project cover',
-
         slides: [
             {
                 description: "In this project, we have a board of squares, and when we hover over one of them, the\n" +
@@ -88,7 +90,8 @@ export const projects: IProjects[] = [
             },
             {
                 projectLink: "Try it yourself!",
-                iconSrc: "./planet-icon.jpg",
+                iconSrc: icon,
+                iconALt: 'Icon',
                 projectSrc: "https://humblezxc.github.io/howerd-desk/",
             },
         ]
