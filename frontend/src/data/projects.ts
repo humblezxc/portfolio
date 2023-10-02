@@ -5,7 +5,7 @@ import icon from "../assets/content/planet-icon.jpg"
 export const projects: IProjects[] = [
     {
         id: 1,
-        title: 'AIM game',
+        title: 'Aim game',
         projectImageSrc: 'https://picsum.photos/id/1082/400/230',
         projectImageAlt: 'Project cover',
         slides: [
