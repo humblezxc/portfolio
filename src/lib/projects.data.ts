@@ -1,0 +1,58 @@
+import type { Project } from "@/components/ProjectCard";
+
+export const projects: Project[] = [
+    {
+        id: "smart-shift",
+        title: "Smart Shift Scheduler",
+        short: "Workforce management SaaS with custom scheduling algorithm.",
+        long: "Workforce management SaaS using Next.js 16, reducing schedule planning time from hours to minutes via automation. Engineered custom scheduling algorithm ensuring 100% compliance with staff availability and role constraints. Implemented RBAC & Middleware security and custom i18n system. Achieved Perfect SEO (100/100) and High Best Practices (92/100) via Lighthouse audit.",
+        tech: ["Next.js", "TypeScript", "Tailwind", "RBAC"],
+        image: "/projects/smart-shift.png",
+        year: 2026,
+    },
+    {
+        id: "museum",
+        title: "Warsaw Museum Collections",
+        short: "Legacy React modernization with Docker environment fixes.",
+        long: "Modernized legacy React code from Class components to Hooks and fixed Docker environments. Implemented shopping cart logic. Reduced maintenance time and cut editorial turnaround by 30%.",
+        tech: ["React", "Docker", "TypeScript"],
+        image: "/projects/museum.png",
+        year: 2025,
+    },
+    {
+        id: "red",
+        title: "RED Software Site",
+        short: "Agency website with dynamic routing and high-performance animations.",
+        long: "Full refactor of agency site. Implemented dynamic routing for multi-language support and high-performance GSAP animations. Optimized initial load times by ~12% via asset optimization.",
+        tech: ["Gatsby", "GSAP", "TypeScript", "i18n"],
+        image: "/projects/red.png",
+        year: 2025,
+    },
+    {
+        id: "socialman",
+        title: "Socialman",
+        short: "Legacy jQuery to vanilla JS refactor with 40% performance boost.",
+        long: "Refactored legacy jQuery into a vanilla JavaScript implementation. Consolidated ~6,000 lines of code down to <1,000, significantly improving maintainability. Achieved ~40% improvement in rendering performance through optimized DOM manipulation and modern JavaScript patterns.",
+        tech: ["Vanilla JS", "HTML", "SCSS", "Bootstrap 5"],
+        image: "/projects/socialman.png",
+        year: 2024,
+    },
+    {
+        id: "opera",
+        title: "Opera Ad Campaigns",
+        short: "Pixel-perfect promotional sites under strict deadlines.",
+        long: "Built pixel-perfect promotional sites under strict deadlines. Focused on responsive design, cross-browser compatibility, and performance optimization.",
+        tech: ["Vanilla JS", "HTML", "CSS"],
+        image: "/projects/opera.png",
+        year: 2024,
+    },
+    {
+        id: "elektrobohater",
+        title: "Elektrobohater",
+        short: "Social platform SPA with real-time feeds and filtering.",
+        long: "Architected a complex SPA from scratch using Redux Toolkit & React Query to handle real-time feeds and filtering for thousands of users. Built robust state management for complex user interactions.",
+        tech: ["React", "Redux Toolkit", "React Query", "TypeScript"],
+        image: "/projects/elektrobohater.png",
+        year: 2023,
+    },
+];
