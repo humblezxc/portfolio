@@ -131,7 +131,7 @@ export default function Hero() {
                         <TelegramIcon />
                     </a>
                     <a
-                        href="mailto:yaroslav.stopenchuk@gmail.com"
+                        href="mailto:stopenchuk.yaroslav@gmail.com"
                         className="p-3 rounded-xl bg-glass border border-[var(--glass-border)] text-[var(--foreground-muted)] hover:text-[var(--primary)] hover:border-[var(--primary)] transition-all duration-300"
                         aria-label="Email"
                     >

@@ -38,8 +38,8 @@ const DownloadIcon = () => (
 const socialLinks = [
     { name: "GitHub", href: "https://github.com/humblezxc", icon: GithubIcon },
     { name: "LinkedIn", href: "https://linkedin.com/in/yaroslav-stopenchuk", icon: LinkedInIcon },
-    { name: "Telegram", href: "https://t.me/humblezxc", icon: TelegramIcon },
-    { name: "Email", href: "mailto:yaroslav.stopenchuk@gmail.com", icon: EmailIcon },
+    { name: "Telegram", href: "https://t.me/s_yarchi", icon: TelegramIcon },
+    { name: "Email", href: "mailto:stopenchuk.yaroslav@gmail.com", icon: EmailIcon },
 ];
 
 export default function Contact() {

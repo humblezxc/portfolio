@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my work as a Frontend/Full-Stack Developer.
 
-**Live:** [humblezxc.github.io/portfolio](https://humblezxc.github.io/portfolio)
+**Live:** [portfolio-yaroslav-stopenchuk](https://portfolio-yaroslav-stopenchuk.vercel.app/)
 
 ## Tech Stack
 
@@ -14,7 +14,7 @@ Personal portfolio website showcasing my work as a Frontend/Full-Stack Developer
 ## Features
 
 - Responsive design with glassmorphism UI
-- Dark/Light theme support
+- Pixel-perfect
 - Multi-language support (EN, PL, UK)
 - Optimized performance (Lighthouse 100/100 SEO)
 
@@ -43,6 +43,6 @@ src/
 
 ## Contact
 
-- **Email:** stopenchuk.yaroslav@gmail.com
+- **Email:** [stopenchuk.yaroslav@gmail.com](mailto:stopenchuk.yaroslav@gmail.com)
 - **LinkedIn:** [linkedin.com/in/yaroslav-stopenchuk](https://linkedin.com/in/yaroslav-stopenchuk)
 - **GitHub:** [github.com/humblezxc](https://github.com/humblezxc)
