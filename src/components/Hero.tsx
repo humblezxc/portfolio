@@ -41,7 +41,7 @@ export default function Hero() {
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
             <svg
-                className="absolute inset-0 w-full h-full opacity-60"
+                className="hero-svg absolute inset-0 w-full h-full"
                 viewBox="0 0 800 600"
                 preserveAspectRatio="xMidYMid slice"
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,21 +49,21 @@ export default function Hero() {
             >
                 <defs>
                     <filter id="goo">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
                         <feColorMatrix
                             in="blur"
                             mode="matrix"
                             values="1 0 0 0 0
                                     0 1 0 0 0
                                     0 0 1 0 0
-                                    0 0 0 20 -10"
+                                    0 0 0 18 -7"
                             result="goo"
                         />
                         <feBlend in="SourceGraphic" in2="goo" />
                     </filter>
                 </defs>
 
-                <g filter="url(#goo)" className="mix-blend-normal">
+                <g className="blobs" filter="url(#goo)">
                     <circle className="blob blob-1" cx="200" cy="200" r="80" fill="#8b5cf6" />
                     <circle className="blob blob-2" cx="350" cy="350" r="100" fill="#6d28d9" />
                     <circle className="blob blob-3" cx="550" cy="180" r="70" fill="#a78bfa" />
@@ -71,7 +71,7 @@ export default function Hero() {
                 </g>
             </svg>
 
-            <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in">
+            <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
                 <h1 className="text-fluid-5xl font-bold tracking-tight">
                     <span className="text-gradient">{t("hero.name").split(" ")[0]}</span>
                     <span className="text-[var(--foreground)]"> {t("hero.name").split(" ").slice(1).join(" ")}</span>
@@ -141,50 +141,55 @@ export default function Hero() {
             </div>
 
             <style jsx>{`
-                .blob {
-                    transform-origin: center;
+                .hero-svg {
+                    opacity: 0.6;
+                    contain: strict;
+                    will-change: contents;
+                }
+                .blobs {
                     mix-blend-mode: screen;
                 }
-                .blob-1 {
-                    animation: float1 10s ease-in-out infinite;
+                .blob {
+                    will-change: transform;
                 }
-                .blob-2 {
-                    animation: float2 12s ease-in-out infinite;
-                }
-                .blob-3 {
-                    animation: float3 8s ease-in-out infinite;
-                }
-                .blob-4 {
-                    animation: float4 11s ease-in-out infinite;
-                }
+                .blob-1 { animation: float1 18s ease-in-out infinite; }
+                .blob-2 { animation: float2 22s ease-in-out infinite; }
+                .blob-3 { animation: float3 16s ease-in-out infinite; }
+                .blob-4 { animation: float4 20s ease-in-out infinite; }
+
                 @keyframes float1 {
-                    0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-                    50% { transform: translateY(-40px) translateX(20px) scale(1.1); }
+                    0%, 100% { transform: translate(0, 0) scale(1); }
+                    50% { transform: translate(30px, -30px) scale(1.05); }
                 }
                 @keyframes float2 {
-                    0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-                    50% { transform: translateY(30px) translateX(-30px) scale(0.9); }
+                    0%, 100% { transform: translate(0, 0) scale(1); }
+                    50% { transform: translate(-25px, 25px) scale(0.95); }
                 }
                 @keyframes float3 {
-                    0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-                    50% { transform: translateY(-25px) translateX(40px) scale(1.15); }
+                    0%, 100% { transform: translate(0, 0) scale(1); }
+                    50% { transform: translate(20px, 30px) scale(1.08); }
                 }
                 @keyframes float4 {
-                    0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-                    50% { transform: translateY(35px) translateX(-20px) scale(1.05); }
+                    0%, 100% { transform: translate(0, 0) scale(1); }
+                    50% { transform: translate(-30px, -20px) scale(1.03); }
                 }
-                @keyframes fade-in {
-                    from {
-                        opacity: 0;
-                        transform: translateY(20px);
+
+                @media (max-width: 1024px) {
+                    .hero-svg {
+                        opacity: 0.5;
                     }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
+                    .blob { animation: none; }
+                }
+
+                @media (max-width: 768px) {
+                    .hero-svg {
+                        opacity: 0.4;
                     }
                 }
-                .animate-fade-in {
-                    animation: fade-in 0.8s ease-out forwards;
+
+                @media (prefers-reduced-motion: reduce) {
+                    .blob, .animate-fade-in { animation: none; }
+                    .animate-fade-in { opacity: 1; }
                 }
             `}</style>
         </section>
