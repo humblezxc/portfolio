@@ -39,7 +39,7 @@ export default function Hero() {
     const { t } = useI18n();
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative min-h-svh flex items-center justify-center overflow-hidden">
             <svg
                 className="hero-svg absolute inset-0 w-full h-full"
                 viewBox="0 0 800 600"
@@ -143,14 +143,10 @@ export default function Hero() {
             <style jsx>{`
                 .hero-svg {
                     opacity: 0.6;
-                    contain: strict;
-                    will-change: contents;
+                    contain: layout style paint;
                 }
                 .blobs {
                     mix-blend-mode: screen;
-                }
-                .blob {
-                    will-change: transform;
                 }
                 .blob-1 { animation: float1 18s ease-in-out infinite; }
                 .blob-2 { animation: float2 22s ease-in-out infinite; }
@@ -178,7 +174,7 @@ export default function Hero() {
                     .hero-svg {
                         opacity: 0.5;
                     }
-                    .blob { animation: none; }
+                    .blob-1, .blob-2, .blob-3, .blob-4 { animation: none; }
                 }
 
                 @media (max-width: 768px) {
@@ -188,8 +184,7 @@ export default function Hero() {
                 }
 
                 @media (prefers-reduced-motion: reduce) {
-                    .blob, .animate-fade-in { animation: none; }
-                    .animate-fade-in { opacity: 1; }
+                    .blob-1, .blob-2, .blob-3, .blob-4 { animation: none; }
                 }
             `}</style>
         </section>
