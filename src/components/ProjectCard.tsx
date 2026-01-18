@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 export type Project = {
     id: string;
@@ -8,7 +8,7 @@ export type Project = {
     short: string;
     long?: string;
     tech: string[];
-    image: string;
+    color: string;
     url?: string;
     year?: number;
 };
@@ -35,19 +35,8 @@ const ChevronIcon = ({ open }: { open: boolean }) => (
     </svg>
 );
 
-const gradients = [
-    "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-    "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-    "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-    "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-];
-
-export default function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
+export default function ProjectCard({ project }: { project: Project }) {
     const [open, setOpen] = useState(false);
-    const [imageError, setImageError] = useState(false);
-    const gradient = gradients[index % gradients.length];
 
     return (
         <article
@@ -55,22 +44,12 @@ export default function ProjectCard({ project, index = 0 }: { project: Project; 
             aria-labelledby={`proj-${project.id}-title`}
         >
             <div className="relative h-48 overflow-hidden">
-                {!imageError ? (
-                    <img
-                        src={project.image}
-                        alt={`${project.title} screenshot`}
-                        loading="lazy"
-                        onError={() => setImageError(true)}
-                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                ) : (
-                    <div
-                        className="w-full h-full flex items-center justify-center"
-                        style={{ background: gradient }}
-                    >
-                        <span className="text-white/80 text-lg font-medium">{project.title}</span>
-                    </div>
-                )}
+                <div
+                    className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
+                    style={{ background: project.color }}
+                >
+                    <span className="text-white/80 text-lg font-medium">{project.title}</span>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                 {project.year && (
                     <span className="absolute top-3 right-3 px-2 py-1 text-xs rounded-full bg-[var(--background)]/60 backdrop-blur-sm border border-[var(--glass-border)]">

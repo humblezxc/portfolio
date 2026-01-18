@@ -20,6 +20,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-yaroslav-stopenchuk.vercel.app"),
   title: "Portfolio - Yaroslav Stopenchuk",
   description: "Frontend Developer with 2+ years of experience specializing in React, Next.js, and TypeScript. Based in Wrocław, Poland.",
   keywords: ["Frontend Developer", "React", "Next.js", "TypeScript", "Wrocław"],
