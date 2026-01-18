@@ -64,24 +64,24 @@ export default function Experience() {
                                 <div className={`md:w-1/2 pl-14 md:pl-0 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                                     <div className="glass rounded-2xl p-6 hover:shadow-glow-sm transition-shadow duration-300">
                                         <span className="text-sm text-[var(--primary-light)] font-medium">
-                                            {exp.period}
+                                            {t(`experience.${exp.id}.period`)}
                                         </span>
                                         <h3 className="mt-2 text-xl font-semibold text-[var(--foreground)]">
-                                            {exp.role}
+                                            {t(`experience.${exp.id}.role`)}
                                         </h3>
                                         <p className="text-[var(--foreground-muted)] mt-1">
-                                            {exp.company}
+                                            {t(`experience.${exp.id}.company`)}
                                         </p>
                                         <p className="mt-4 text-sm text-[var(--foreground-muted)] leading-relaxed">
-                                            {exp.description}
+                                            {t(`experience.${exp.id}.description`)}
                                         </p>
                                         <div className="mt-4 flex flex-wrap gap-2">
-                                            {exp.tech.map((t) => (
+                                            {exp.tech.map((tech) => (
                                                 <span
-                                                    key={t}
+                                                    key={tech}
                                                     className="text-xs px-2.5 py-1 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary-light)]"
                                                 >
-                                                    {t}
+                                                    {tech}
                                                 </span>
                                             ))}
                                         </div>
