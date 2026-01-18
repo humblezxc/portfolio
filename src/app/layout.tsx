@@ -30,11 +30,21 @@ export const metadata: Metadata = {
     description: "Frontend Developer specializing in React, Next.js, and TypeScript",
     type: "website",
     url: "https://portfolio-yaroslav-stopenchuk.vercel.app",
+    siteName: "Yaroslav Stopenchuk Portfolio",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Yaroslav Stopenchuk — Frontend Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Yaroslav Stopenchuk — Frontend Developer",
     description: "Frontend Developer specializing in React, Next.js, and TypeScript",
+    images: ["/twitter-image"],
   },
 };
 
