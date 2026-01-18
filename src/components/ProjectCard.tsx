@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useI18n } from "@/lib/i18n";
 
 export type Project = {
     id: string;
-    title: string;
-    short: string;
-    long?: string;
     tech: string[];
     color: string;
     url?: string;
@@ -37,6 +35,11 @@ const ChevronIcon = ({ open }: { open: boolean }) => (
 
 export default function ProjectCard({ project }: { project: Project }) {
     const [open, setOpen] = useState(false);
+    const { t } = useI18n();
+
+    const title = t(`projects.${project.id}.title`);
+    const short = t(`projects.${project.id}.short`);
+    const long = t(`projects.${project.id}.long`);
 
     return (
         <article
@@ -48,7 +51,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
                     style={{ background: project.color }}
                 >
-                    <span className="text-white/80 text-lg font-medium">{project.title}</span>
+                    <span className="text-white/80 text-lg font-medium">{title}</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                 {project.year && (
@@ -60,19 +63,19 @@ export default function ProjectCard({ project }: { project: Project }) {
 
             <div className="p-5">
                 <h3 id={`proj-${project.id}-title`} className="text-lg font-semibold text-[var(--foreground)]">
-                    {project.title}
+                    {title}
                 </h3>
                 <p className="text-sm text-[var(--foreground-muted)] mt-2 line-clamp-2">
-                    {project.short}
+                    {short}
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
+                    {project.tech.map((tech) => (
                         <span
-                            key={t}
+                            key={tech}
                             className="text-xs px-2.5 py-1 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary-light)]"
                         >
-                            {t}
+                            {tech}
                         </span>
                     ))}
                 </div>
@@ -85,20 +88,18 @@ export default function ProjectCard({ project }: { project: Project }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-[var(--primary)] text-white hover:shadow-glow-sm transition-all duration-300"
                         >
-                            View
+                            {t("projects.view")}
                             <ExternalLinkIcon />
                         </a>
                     )}
-                    {project.long && (
-                        <button
-                            onClick={() => setOpen((v) => !v)}
-                            aria-expanded={open}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-[var(--glass-border)] text-[var(--foreground-muted)] hover:border-[var(--primary)]/50 hover:text-[var(--foreground)] transition-all duration-300"
-                        >
-                            Details
-                            <ChevronIcon open={open} />
-                        </button>
-                    )}
+                    <button
+                        onClick={() => setOpen((v) => !v)}
+                        aria-expanded={open}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-[var(--glass-border)] text-[var(--foreground-muted)] hover:border-[var(--primary)]/50 hover:text-[var(--foreground)] transition-all duration-300"
+                    >
+                        {t("projects.details")}
+                        <ChevronIcon open={open} />
+                    </button>
                 </div>
 
                 <div
@@ -109,7 +110,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 >
                     <div className="pt-4 border-t border-[var(--glass-border)]">
                         <p className="text-sm leading-relaxed text-[var(--foreground-muted)]">
-                            {project.long}
+                            {long}
                         </p>
                     </div>
                 </div>
