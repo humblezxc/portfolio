@@ -39,7 +39,7 @@ export default function Hero() {
     const { t } = useI18n();
 
     return (
-        <section id="home" className="relative min-h-svh flex items-center justify-center overflow-hidden">
+        <section id="home" className="hero-section relative min-h-svh flex items-center justify-center overflow-hidden">
             <svg
                 className="hero-svg absolute inset-0 w-full h-full"
                 viewBox="0 0 800 600"
@@ -172,14 +172,7 @@ export default function Hero() {
 
                 @media (max-width: 1024px) {
                     .hero-svg {
-                        opacity: 0.5;
-                    }
-                    .blob-1, .blob-2, .blob-3, .blob-4 { animation: none; }
-                }
-
-                @media (max-width: 768px) {
-                    .hero-svg {
-                        opacity: 0.4;
+                        display: none;
                     }
                 }
 

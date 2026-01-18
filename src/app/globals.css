@@ -61,23 +61,32 @@
 
 .bg-glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid var(--glass-border);
 }
 
 .bg-glass-strong {
   background: rgba(139, 92, 246, 0.12);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .bg-glass-subtle {
   background: rgba(139, 92, 246, 0.04);
-  backdrop-filter: blur(8px) saturate(120%);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
   border: 1px solid rgba(139, 92, 246, 0.08);
+}
+
+@media (min-width: 1024px) {
+  .bg-glass {
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+  }
+  .bg-glass-strong {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+  .bg-glass-subtle {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+  }
 }
 
 @layer components {
@@ -87,13 +96,24 @@
 
   .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px) saturate(150%);
-    -webkit-backdrop-filter: blur(12px) saturate(150%);
     border: 1px solid var(--glass-border);
     transform: translateZ(0);
     transition: transform 250ms cubic-bezier(0.2, 0.9, 0.2, 1),
                 box-shadow 250ms ease,
                 border-color 250ms ease;
+  }
+
+  @media (min-width: 1024px) {
+    .glass {
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .glass {
+      background: rgba(15, 10, 26, 0.9);
+    }
   }
 
   @media (hover: hover) {
@@ -150,8 +170,13 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -160,6 +185,22 @@ html {
   }
   body {
     min-height: -webkit-fill-available;
+  }
+}
+
+.hero-section::before {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(109, 40, 217, 0.1) 0%, transparent 50%);
+    display: block;
+    pointer-events: none;
   }
 }
 
