@@ -39,9 +39,11 @@ export default function About() {
                     <div className="relative">
                         <div className="aspect-square rounded-2xl bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] opacity-20 absolute inset-0 blur-3xl"/>
                         <div className="glass rounded-2xl p-1 relative">
-                            <div className="aspect-square rounded-xl bg-gradient-to-br from-[var(--primary)]/20 to-[var(--primary-dark)]/20 flex items-center justify-center">
-                                <span className="text-8xl">👨‍💻</span>
-                            </div>
+                            <img
+                                src="/profile.jpg"
+                                alt="Yaroslav Stopenchuk"
+                                className="aspect-square rounded-xl object-cover object-[center_12%] w-full"
+                            />
                         </div>
                     </div>
 
