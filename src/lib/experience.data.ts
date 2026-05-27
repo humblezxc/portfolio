@@ -6,14 +6,14 @@ export interface Experience {
 export const experiences: Experience[] = [
     {
         id: "exp-1",
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "RBAC"],
+        tech: ["React", "TypeScript", "Zustand", "Docker", "Kubernetes"],
     },
     {
         id: "exp-2",
-        tech: ["React", "Next.js", "Gatsby", "Redux Toolkit", "React Query", "GSAP"],
+        tech: ["Next.js", "TypeScript", "Supabase", "RBAC", "PWA"],
     },
     {
         id: "exp-3",
-        tech: ["React", "MUI", "Agile"],
+        tech: ["React", "Next.js", "Gatsby", "Redux Toolkit", "React Query", "GSAP"],
     },
 ];

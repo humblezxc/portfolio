@@ -93,8 +93,8 @@ export default function Hero() {
                         {t("hero.viewProjects")}
                     </a>
                     <a
-                        href="/CV_Yaroslav_Stopenchuk.pdf"
-                        download
+                        href="/Yaroslav_Stopenchuk_CV.pdf"
+                        download="Yaroslav_Stopenchuk_CV.pdf"
                         className="btn-outline inline-flex items-center gap-2 text-[var(--foreground)]"
                     >
                         <DownloadIcon />
