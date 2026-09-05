@@ -22,18 +22,18 @@ export const projects: Project[] = [
         year: 2026,
     },
     {
-        id: "geosoft",
-        tech: ["Next.js", "GraphQL", "WordPress", "i18n"],
-        color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-        url: "https://geosoft.com.pl",
-        year: 2025,
-    },
-    {
         id: "museum",
         tech: ["React", "Docker", "TypeScript"],
         color: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
         url: "https://kolekcje.muzeumwarszawy.pl/en",
         year: 2025,
+    },
+    {
+        id: "geosoft",
+        tech: ["Next.js", "GraphQL", "WordPress", "i18n"],
+        color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+        url: "https://geosoft.com.pl",
+        year: 2024,
     },
     {
         id: "elektrobohater",
