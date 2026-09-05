@@ -5,49 +5,77 @@ export interface Skill {
 
 export interface SkillCategory {
     id: string;
-    title: string;
     skills: Skill[];
 }
 
 export const skillCategories: SkillCategory[] = [
     {
-        id: "frontend",
-        title: "Frontend",
+        id: "languages",
         skills: [
-            { name: "React", icon: "react" },
-            { name: "Next.js", icon: "nextjs" },
             { name: "TypeScript", icon: "typescript" },
-            { name: "Gatsby", icon: "gatsby" },
+            { name: "JavaScript", icon: "javascript" },
+            { name: "HTML5", icon: "html" },
+            { name: "CSS / SCSS", icon: "scss" },
         ],
     },
     {
-        id: "styling",
-        title: "Styling",
+        id: "frameworks",
         skills: [
-            { name: "Tailwind CSS", icon: "tailwind" },
-            { name: "SCSS", icon: "scss" },
-            { name: "HTML5", icon: "html" },
-            { name: "Bootstrap", icon: "bootstrap" },
+            { name: "React", icon: "react" },
+            { name: "Next.js", icon: "nextjs" },
+            { name: "Node.js", icon: "nodejs" },
         ],
     },
     {
         id: "state",
-        title: "State & Data",
         skills: [
             { name: "Redux Toolkit", icon: "redux" },
             { name: "React Query", icon: "reactquery" },
-            { name: "REST API", icon: "api" },
+            { name: "Zustand", icon: "zustand" },
+        ],
+    },
+    {
+        id: "ui",
+        skills: [
+            { name: "Tailwind CSS", icon: "tailwind" },
+            { name: "Radix UI", icon: "radixui" },
+            { name: "shadcn/ui", icon: "shadcnui" },
+        ],
+    },
+    {
+        id: "backend",
+        skills: [
+            { name: "Supabase", icon: "supabase" },
+            { name: "PostgreSQL", icon: "postgresql" },
+            { name: "Stripe", icon: "stripe" },
+            { name: "REST / OpenAPI", icon: "api" },
             { name: "GraphQL", icon: "graphql" },
         ],
     },
     {
-        id: "tools",
-        title: "Tools & DevOps",
+        id: "testing",
+        skills: [
+            { name: "Vitest", icon: "vitest" },
+            { name: "Playwright", icon: "playwright" },
+            { name: "Testing Library", icon: "testinglibrary" },
+        ],
+    },
+    {
+        id: "devops",
         skills: [
             { name: "Git", icon: "git" },
             { name: "Docker", icon: "docker" },
-            { name: "Node.js", icon: "nodejs" },
-            { name: "Jest", icon: "jest" },
+            { name: "Kubernetes", icon: "kubernetes" },
+            { name: "CI/CD", icon: "cicd" },
+            { name: "Vercel", icon: "vercel" },
+        ],
+    },
+    {
+        id: "ai",
+        skills: [
+            { name: "Claude Code", icon: "claude" },
+            { name: "Cursor", icon: "cursor" },
+            { name: "Agent-first workflow", icon: "agent" },
         ],
     },
 ];

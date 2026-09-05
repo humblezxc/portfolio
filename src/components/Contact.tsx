@@ -77,8 +77,8 @@ export default function Contact() {
 
                         <div className="mt-10">
                             <a
-                                href="/CV_Yaroslav_Stopenchuk.pdf"
-                                download
+                                href="/Yaroslav_Stopenchuk_CV.pdf"
+                                download="Yaroslav_Stopenchuk_CV.pdf"
                                 className="btn-glow inline-flex items-center gap-3 text-white text-lg"
                             >
                                 <DownloadIcon />

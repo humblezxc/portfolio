@@ -22,8 +22,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-yaroslav-stopenchuk.vercel.app"),
   title: "Portfolio - Yaroslav Stopenchuk",
-  description: "Frontend / Full-Stack Developer with 3+ years of experience in React, Next.js, and TypeScript. Based in Wroclaw, Poland.",
-  keywords: ["Frontend Developer", "Full-Stack Developer", "React", "Next.js", "TypeScript", "Supabase", "Stripe", "Wrocław"],
+  description: "Frontend / Full-Stack Developer in Wrocław, Poland. Building React, Next.js and TypeScript products end to end, with 3 years of commercial experience — multi-tenant SaaS, offline-first tooling, and an AI assistant web client shipped agent-first with Claude Code.",
+  keywords: ["Frontend Developer", "Full-Stack Developer", "React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Stripe", "Kubernetes", "Claude Code", "Wrocław"],
   authors: [{ name: "Yaroslav Stopenchuk" }],
   openGraph: {
     title: "Yaroslav Stopenchuk — Frontend / Full-Stack Developer",
